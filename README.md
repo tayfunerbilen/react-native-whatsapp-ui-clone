@@ -4,4 +4,4 @@ React native denemeleri devam ediyor, whatsapp'ın sobhet ekranının bir kısm�
 
 #### Sohbet ekranı demo
 
-![](whatsapp.png)
+![](whatsapp.gif)

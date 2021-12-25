@@ -1,8 +1,8 @@
 import {View, Text, StyleSheet, Animated, Image, Pressable, Easing} from "react-native";
 import {Delivered, Check} from "../../icons";
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useRef, useState,memo} from "react";
 
-function ChatItem({chat, editMode}) {
+function ChatItem({chat, editMode,navigation}) {
 
     const [selected, setSelected] = useState(false)
     const width = useRef(new Animated.Value(0)).current;
@@ -30,7 +30,9 @@ function ChatItem({chat, editMode}) {
         if (editMode) {
             setSelected(!selected)
         } else {
-            // !todo : chat ekranı gösterilecek
+            navigation.navigate("Chat",{
+                chat:chat
+            });
         }
     }
 
@@ -82,7 +84,7 @@ function ChatItem({chat, editMode}) {
     )
 }
 
-export default ChatItem
+export default memo(ChatItem)
 
 const styles = StyleSheet.create({
     chat: {

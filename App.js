@@ -92,7 +92,7 @@ export default function App() {
     return (
         <NavigationContainer>
             <StatusBar style="auto" />
-            <Stack.Navigator>
+            <Stack.Navigator initialRouteName="Root">
                 <Stack.Screen name="Chat" component={ChatScreen} options={{ headerShown: false }} />
                 <Stack.Screen name="Root" component={Root} options={{ headerShown: false }}/>
             </Stack.Navigator>
